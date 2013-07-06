@@ -1,7 +1,7 @@
 Lemon Web SDK
 =============
 
-The Lemon SDK adds one-click checkout to your mobile app. For more information, check out the [Lemon Developers](#http://lemon.com/developers) website.
+The Lemon SDK adds easy checkout to your mobile app. For more information, check out the [Lemon Developers](#http://lemon.com/developers) website.
 
 + [Lemon Web SDK overview](#lemon-web-sdk-overview)
 + [Integration](#integration)
