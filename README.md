@@ -1,4 +1,9 @@
-[Lemon Web SDK overview](#lemon-web-sdk-overview)
+Lemon Web SDK
+=============
+
+The Lemon SDK adds easy checkout to your mobile app. For more information, check out the [Lemon Developers](#http://lemon.com/developers) website.
+
++ [Lemon Web SDK overview](#lemon-web-sdk-overview)
 + [Integration](#integration)
 + [Flow description](#flow-description)
 
