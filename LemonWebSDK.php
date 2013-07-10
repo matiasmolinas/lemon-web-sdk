@@ -99,29 +99,29 @@
 			<script>
 			function showLemon(){
 				if(screen.width>685 || screen.height>685){
-					$("#lemon-wrapper").show();
+					jQuery("#lemon-wrapper").show();
 					overlay();
 				}else{
 					window.location.href="'.$url.'";
 				}
 			}
 			function hideLemon(){
-				$("#lemon-wrapper").hide();
+				jQuery("#lemon-wrapper").hide();
 			}
 			function overlay(){
-				var pos = $("#lemon-sdk").position();
-				$("#lemon-loader").css("top", pos.top+" px");
-				$("#lemon-loader").css("left", pos.left+" px");
-			    $("#lemon-loader").css("width", $("#lemon-sdk").width());
-			    $("#lemon-loader").css("height", $("#lemon-sdk").height());
+				var pos = jQuery("#lemon-sdk").position();
+				jQuery("#lemon-loader").css("top", pos.top+" px");
+				jQuery("#lemon-loader").css("left", pos.left+" px");
+			    jQuery("#lemon-loader").css("width", jQuery("#lemon-sdk").width());
+			    jQuery("#lemon-loader").css("height", jQuery("#lemon-sdk").height());
 			}
 			function setAllLemonJS(){
 			  
-			  var iframeEl = \'<iframe id="lemon-sdk" src="'.($url).'" style="background: #222222; border-radius:0px !important; border:none; margin:0; padding:0; z-index:999999; min-width: 320px; min-height: 400px; width: '.$width.' height: '.$height.';"></iframe>\';
+			  var iframeEl = \'<iframe id="lemon-sdk" src="'.($url).'" style="background: #222222; border-radius:0px !important; border:none; margin:0; padding:0; z-index:999999; min-width: 320px; min-height: 400px; width: '.$width.'; height: '.$height.';"></iframe>\';
 			  
 			  
 			  if(screen.width>685 || screen.height>685){
-				  $("#lsdk").replaceWith(iframeEl);		
+				  jQuery("#lsdk").replaceWith(iframeEl);		
 			  }
 			  
 			  var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
@@ -130,22 +130,22 @@
 			  
 			  eventer(messageEvent,function(e) {
 			    if(e.data=="loading"){
-			    	$("#lemon-loader").show();
+			    	jQuery("#lemon-loader").show();
 			    }else if(e.data=="ready"){
-			    	$("#lemon-loader").hide();
+			    	jQuery("#lemon-loader").hide();
 			    }else{
 			    	hideLemon();
 			    	'.(!empty($SDK->js_callback) ? "callbackFN(e.data);" : '').'
 			    }
 			  },false);
-			  $(window).resize(function(){
+			  jQuery(window).resize(function(){
 				overlay();
 			  });
-			  $().load(function(){
-			  	$("#lemon-sdk").load(function(){
-			  		$("#lemon-loader").hide();
+			  jQuery().load(function(){
+			  	jQuery("#lemon-sdk").load(function(){
+			  		jQuery("#lemon-loader").hide();
 			  	});   	
-			    $(window).resize();
+			    jQuery(window).resize();
 			  });
 			  ';         
 	   		  $html .= "
