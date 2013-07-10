@@ -24,6 +24,11 @@ Once you download the SDK, replace the credentials in index.php and callback.php
 + &lt;NEED_BILLINGADDRESS> is a flag that indicates if your application will need or not the billing address of the user's payment card.  If is set to YES, every time the user selects or adds a payment card, the billing information will be sent to your application. If the billing address of a selected card is empty, the user will be force to enter the information. If is set to NO, then the payment card billing address will not be ask to the user and not passed to your application
 + &lt;NEED_CARDHOLDER> is a flag that indicates if your application will need or not the cardholder of the user's payment card.  If is set to YES, every time the user selects or adds a payment card, the cardholder will be sent to your application. If the cardholder of a selected card is empty, the user will be force to enter the information. If is set to NO, then the payment card cardholder will not be ask to the user and not passed to your application
 
+If the SDK is configured to work with a payment processor, the payment flow configuration options are:
++ &lt;CURRENCY> is an ISO­3 currency code used in this payment transaction.
++ &lt;DESCRIPTION> is the description (eg product description) for the current payment transaction.
++ &lt;AMOUNT> is a float number for the total amount of the current payment transaction.
+
 
 ##Flow description:
 
